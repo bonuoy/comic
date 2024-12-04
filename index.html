@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comic Reader</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- 引入 PDF.js 和 worker -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.worker.min.js"></script>
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Comic Reader</h1>
+        <nav>
+            <ul id="comic-list"></ul>
+        </nav>
+    </header>
+
+    <main>
+        <div id="comic-viewer" class="hidden">
+            <button id="prev-btn" onclick="prevPage()">上一页</button>
+            <button id="next-btn" onclick="nextPage()">下一页</button>
+            <button id="close-btn" onclick="closeComic()">关闭</button>
+            <canvas id="pdf-canvas"></canvas>
+            <p id="page-number">第 1 页 / 共 0 页</p>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Comic Reader. All rights reserved.</p>
+    </footer>
+</body>
+</html>
